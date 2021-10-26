@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-attachment:fixed;
+    background-image: url(kokino.jpg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.nav {
+    background:teal;
+    text-align: center;
+
+}
+
+.nav ul {
+    list-style: none;
+    display:inline-flex
+}
+
+.nav ul li {
+    width: 170px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    color:mediumaquamarine;
+    text-transform: uppercase;
+}
+
+.nav ul li:hover {
+    background:powderblue;
+}
+
+.dropdown {
+    display: none;
+}
+
+.nav ul li:hover .dropdown {
+    display: block;
+    position: absolute;
+    background:teal;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.nav ul li:hover .dropdown ul {
+    display: block;
+    margin: 10px;
+}
+
