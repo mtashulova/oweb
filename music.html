@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="music_style.css">
+</head>
+
+<body>
+
+   <div class = "nav">
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="">Favorites</a>
+          <div class="dropdown">
+          <ul>
+             <li><a href="music.html">Music</a></li>
+             <li><a href="movies.html">Movies</a></li>
+             <li><a href="tvshows.html">TV Shows</a></li>
+          </ul>
+          </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </div>
+
+
+
+
+<section>
+  <div class="main">
+  	<p id="logo"><i class="fa fa-music"></i>Music</p>
+    
+    
+     <div class="left">
+
+     
+      <img id="track_image">
+      
+
+     </div>
+ 
+
+
+  	 <div class="right">
+
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">10</p>
+        </div>
+
+    
+      <p id="title">title.mp3</p> <br>
+      <p id="artist">Artist name</p>
+
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+  	       <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+  	   </div>
+
+     
+           
+  	</div>
+
+
+  </div>
+   
+  <script src="music_script.js"></script>
+
+  </section>
+</body>
+</html>
