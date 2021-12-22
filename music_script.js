@@ -22,7 +22,7 @@ let All_song = [
      name: "Last Day (David August Revision)",
      path: "music/song1.mp3",
      img: "img/img1.jpg",
-     singer: "David August"
+     singer: "Kollektiv Turmstrasse"
    },
    {
      name: "Time",

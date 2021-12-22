@@ -3,12 +3,21 @@
         <meta charset="utf-8">
         <link rel = "stylesheet" type="text/css"
         href="gallery_styles.css">
-        <link rel = "stylesheet" type="text/css"
-        href="lightbox.min.css">
-        <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
         <title>Gallery</title>
         <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lightbox.min.css">
+        <link rel="icon" href="imgs/icon.png">
+        <script src="lightbox-plus-jquery.min.js"></script>
+        <script src="comment.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="tnx.js"></script>
+        <script src="likes.js"></script>
+        <script src="welcome.js"></script>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://kit.fontawesome.com/4f12997790.js" crossorigin="anonymous"></script>
+       
 
 
 
@@ -29,72 +38,94 @@
                 </div>
             </li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         
         </div>
 
-        <div class="full" id="fullImgBox">
-            <img src= "gallery/a.jpg" id="fullImg">
-            <span onclick="closeFullImg()">X</span>
-
-
-
-        </div>
-
 
         <div class="gallery">
+            <figure><a href="gallery/a.jpg" data-lightbox="mygallery" data-title="pic1"><img src="gallery/a.jpg"></a></figure>
+                <figcaption><i onclick="Toggle(btn1)" id="btn1" class="far fa-heart"></i>
+                     <section id="komentari">
+                         <div class="container">
+                             <input type="text" placeholder="Comment" id="comment" class="comment">
+                             <button class="add-comment" id="add-comment1" onclick="insert(0)"><i class="fas fa-reply"></i></button>
+                         </div>
+                         <section class="comments" id="comments-container"></section>
+                     </section>
+                </figcaption>
 
-           <img src="gallery/a.jpg" onclick="openFullImg(this.src)">
+            <figure><a href="gallery/b.jpg" data-lightbox="mygallery" data-title="pic2"><img src="gallery/b.jpg"></a></figure>
+                <figcaption><i onclick="Toggle(btn2)" id="btn2" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(1)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
 
-           <img src="gallery/b.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/c.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/d.JPG" onclick="openFullImg(this.src)">
-           <img src="gallery/e.jpg" onclick="openFullImg(this.src)">
-           <img src="gallery/f.jpg" onclick="openFullImg(this.src)">
-           <img src="gallery/g.JPG" onclick="openFullImg(this.src)">
-           <img src="gallery/h.PNG" onclick="openFullImg(this.src)">
-           <img src="gallery/i.jpg" onclick="openFullImg(this.src)">
-           <img src="gallery/j.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/k.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/l.JPG" onclick="openFullImg(this.src)">
-            <img src="gallery/m.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/n.jpg" onclick="openFullImg(this.src)">
-            <img src="gallery/o.JPG" onclick="openFullImg(this.src)">
+            <figure><a href="gallery/c.JPG" data-lightbox="mygallery" data-title="pic3"><img src="gallery/c.JPG"></a></figure> 
+                <figcaption><i onclick="Toggle(btn3)" id="btn3" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(2)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
+                
+            <figure><a href="gallery/d.JPG" data-lightbox="mygallery" data-title="pic4"><img src="gallery/d.JPG"></a></figure> 
+                <figcaption><i onclick="Toggle(btn4)" id="btn4" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(3)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
+            <figure><a href="gallery/e.jpg" data-lightbox="mygallery" data-title="pic5"><img src="gallery/e.jpg"></a></figure>
+                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(4)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption> 
 
-        </div>
+                <figure><a href="gallery/f.jpg" data-lightbox="mygallery" data-title="pic6"><img src="gallery/f.jpg"></a></figure>
+                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(4)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption> 
+
+                <figure><a href="gallery/g.jpg" data-lightbox="mygallery" data-title="pic7"><img src="gallery/g.jpg"></a></figure>
+                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(4)"><i class="fas fa-reply"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
 
 
+                </div>
 
-
-       
-<script>
-
-    var fullImgBox = document.getElementById("fullImgBox");
-    var fullImg = document.getElementById("fullImg");
-
-    function openFullImg(pic) {
-        fullImgBox.style.display = "flex";
-        fullImg.src = pic;
-
-        
-    }
-
-    function closeFullImg() {
-        fullImgBox.style.display = "none";
-
-    }
-
-
-
-
-
-
-   
-
-</script>
-
-</body>
-
-
+                </body>
 </html>
+
+

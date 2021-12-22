@@ -138,11 +138,11 @@ section{
 	transform: translateX(-50%);
 	text-transform: capitalize;
 	color: #fff;
-	font-size: 35px;
+	font-size: 30px;
 }
 .right #artist{
 	position: absolute;
-	top: 110px;
+	top: 150px;
 	left: 50%;
 	transform: translateX(-50%);
 	text-transform: capitalize;

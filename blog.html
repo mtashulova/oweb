@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Margarita Tashulova</title>
+    <link rel = "stylesheet" type="text/css"
+        href="blog_styles.css">
+    <script src="tnx.js"></script>
+    
+</head>
+
+<body>
+
+<div class = "nav">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="">Favorites</a>
+        <div class="dropdown">
+        <ul>
+           <li><a href="music.html">Music</a></li>
+           <li><a href="movies.html">Movies</a></li>
+           <li><a href="tvshows.html">TV Shows</a></li>
+        </ul>
+        </div>
+    </li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</div>
+<br>
+
+<div class="container">
+
+
+    <p>
+    <fieldset class="tekst">
+        <p class="naslov">New Posts</p>
+
+        <div class="blogbox">
+            <div class="blogtitle">
+                Title
+            </div>
+            <div class="imedata">
+                by Margarita Tashulova
+            </div>&#160;
+
+            <hr class="bl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+            eu fugiat nulla pariatur.
+        </div>
+        <br>
+
+        <div id="postovi">
+        </div>
+
+    </fieldset>
+    </p>
+
+    <p>
+        <fieldset class="tekst">
+            <p class="naslov2">Want to submit your own blog post?<br>
+                Write it below and we'll post it for you!
+            </p>
+    
+            <div
+                style=" padding: 10px;">
+                <form id="blogpost" onsubmit="postiraj()">
+                    <label>Title</label><br>
+                    <input type="text" id="title" style="width: 50%;" required><br><br>
+                    <label>Author</label><br>
+                    <input type="text" id="author" style="width: 50%;" required> &#160;&#160;
+                    <br><br>
+                    <label>Content</label><br>
+                    <textarea id="blogtext" rows="5" cols="65" required></textarea><br><br>
+                    <button onclick="tnx_blog()" class="kopce">Post</button>
+                    <!--<input type="submit" onclick = "tnx_blog()" class="kopcepost" id="postni" value="Post">-->
+                </form>
+            </div>
+        </fieldset>
+        </p>
+
+</div>
+
+
+<script>
+    var string = "";
+    function postiraj() {
+        event.preventDefault();
+        var naslov = document.getElementById("title").value;
+        var avtor = document.getElementById("author").value;
+        var tekst = document.getElementById("blogtext").value;
+
+        string += "<div class=\"blogbox\"> <div class=\"blogtitle\">" + naslov + " </div> " +
+            "<div class=\"imedata\"> <i class=\"fa fa-pencil-square-o\">&#160;</i>by " + avtor + "</div>&#160;" +
+            "<hr class=\"bl\">" + tekst + "</div><br>"
+        document.getElementById("postovi").innerHTML = string;
+    }
+
+</script>
+
+</body>
+</html>
